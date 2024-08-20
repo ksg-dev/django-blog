@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9vs8o3b)b14@c%ip)qnu-1_o*6%u!3xd6^j-1@l1e_ab-miyaf'
+SECRET_KEY = SECRET_GOES_HERE
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = getenv("IS_DEVELOPMENT", True)
@@ -84,10 +84,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER' : 'djangoblog',
-        'PASSWORD' : 'test1234',
-        'HOST' : 'django-blog.cw8udb16l7us.us-east-1.rds.amazonaws.com',
-        'PORT' : '5432'
+        'USER' : SECRET_GOES_HERE,
+        'PASSWORD' : SECRET_GOES_HERE,
+        'HOST' : SECRET_GOES_HERE
+        'PORT' : SECRET_GOES_HERE
     }
 }
 
@@ -136,10 +136,10 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = BASE_DIR / "uploads"
 MEDIA_URL = "/files/"
 
-AWS_STORAGE_BUCKET_NAME = "django-blogsite"
-AWS_S3_REGION_NAME = "us-east-1"
-AWS_ACCESS_KEY_ID = "AKIAZNHAYYUDPJKTIAYI"
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = SECRET_GOES_HERE
+AWS_S3_REGION_NAME = SECRET_GOES_HERE
+AWS_ACCESS_KEY_ID = SECRET_GOES_HERE
+AWS_SECRET_ACCESS_KEY = SECRET_GOES_HERE
 
 AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 
